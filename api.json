@@ -1,0 +1,170 @@
+[
+    {
+        "numero": 1,
+        "id": 1,
+        "tipo": "Single",
+        "piso": 1,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 2,
+        "id": 2,
+        "tipo": "Single",
+        "piso": 1,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 3,
+        "id": 3,
+        "tipo": "Doble",
+        "piso": 1,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 4,
+        "id": 4,
+        "tipo": "Single",
+        "piso": 1,
+        "estado": "Mantencion" 
+    },
+    {
+        "numero": 5,
+        "id": 5,
+        "tipo": "Single",
+        "piso": 1,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 6,
+        "id": 6,
+        "tipo": "Single",
+        "piso": 1,
+        "estado": "Mantencion" 
+    },
+    {
+        "numero": 7,
+        "id": 7,
+        "tipo": "Suite",
+        "piso": 1,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 21,
+        "id": 8,
+        "tipo": "Doble",
+        "piso": 2,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 22,
+        "id": 9,
+        "tipo": "Single",
+        "piso": 2,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 23,
+        "id": 10,
+        "tipo": "Doble",
+        "piso": 2,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 24,
+        "id": 11,
+        "tipo": "Doble",
+        "piso": 2,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 25,
+        "id": 12,
+        "tipo": "Doble",
+        "piso": 2,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 26,
+        "id": 13,
+        "tipo": "Suite",
+        "piso": 2,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 27,
+        "id": 14,
+        "tipo": "Suite",
+        "piso": 2,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 31,
+        "id": 15,
+        "tipo": "Doble",
+        "piso": 3,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 32,
+        "id": 16,
+        "tipo": "Doble",
+        "piso": 3,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 33,
+        "id": 17,
+        "tipo": "Single",
+        "piso": 3,
+        "estado": "Mantencion" 
+    },
+    {
+        "numero": 34,
+        "id": 18,
+        "tipo": "Single",
+        "piso": 3,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 35,
+        "id": 19,
+        "tipo": "Doble",
+        "piso": 3,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 36,
+        "id": 20,
+        "tipo": "Doble",
+        "piso": 3,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 37,
+        "id": 21,
+        "tipo": "Suite",
+        "piso": 3,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 38,
+        "id": 22,
+        "tipo": "Suite",
+        "piso": 3,
+        "estado": "Ocupada" 
+    },
+    {
+        "numero": 39,
+        "id": 23,
+        "tipo": "Suite",
+        "piso": 3,
+        "estado": "Disponible" 
+    },
+    {
+        "numero": 28,
+        "id": 24,
+        "tipo": "Single",
+        "piso": 2,
+        "estado": "Disponible" 
+    }
+]

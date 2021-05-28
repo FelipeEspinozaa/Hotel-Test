@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
+
+$mainColor: #00adb5;
+$secondaryColor: #393e46;
+$verde-habitacion-libre: #70e000;
+$rojo-habitacion-ocupada: #e5383b;
+$plomo-habitacion-mantencion: #e5e5e5;
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: white;
+    font-family: "Poppins";
+
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.75fr 3fr 0.5fr;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template-areas: 
+        "main-top main-top main-top"
+        "main-sidebar main-content main-content"
+        "main-sidebar main-content main-content";
+}
+
+.main-top{
+    grid-area: main-top;
+    color: white;
+
+    display: flex;
+    background-color: $mainColor;
+    text-align: center;
+    align-items: center;
+    place-content: space-between;
+
+
+    &__profile{
+        margin-right: 2em;
+
+        img{
+            width: 2em;
+            height: 2em;
+            cursor: pointer;
+        }
+    }
+
+    &__logo{
+        margin-left: 2em;
+        font-size: 2em;
+
+        span{
+            font-weight: bold;
+            color: #ffc947;
+        }
+    }
+}
+
+.main-sidebar{
+    grid-area: main-sidebar;
+    background-color: $mainColor;
+
+    .sidebar-link{
+        width: 100%;
+        height: 8%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+
+        span{
+            width: 100%;
+        }
+
+        img{
+            width: 2em;
+            height: 2em;
+            margin: 0 1em;
+        }
+
+        &:first-child{
+            margin-top: 3em;
+        }
+
+
+        &:hover{
+            background-color: $secondaryColor;
+            transition: .5s;
+            transform: scale(1.02);
+        }
+    }
+}
+
+.main-content{
+    grid-area: main-content;
+
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+
+}
+
+.main-section{
+    margin-top: 3em;
+    display: flex;
+    padding: 0 2em 2em 0;
+    flex-direction: column;
+    border-radius: 1em;
+    box-shadow: 3px 6px 17px 1px rgba(0,0,0,0.7);
+
+    .section__title{
+        padding: .3em;
+        border-radius: .5em 0 1em 0;
+        background-color: $secondaryColor;
+        margin-top: 0;
+        width: max-content;
+        color: white;
+    
+    }
+
+    .section__inputs{
+        display: flex;
+        justify-content: space-around;
+        padding: .5em;
+    
+
+        .inputs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default radio button */
+        .inputs input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Create a custom radio button */
+        .checkmark {
+            position: absolute;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .inputs:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        /* When the radio button is checked, add a blue background */
+        .inputs input:checked ~ .checkmark {
+            background-color: $mainColor;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .inputs input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .inputs .checkmark:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+
+    }
+
+
+
+    .section__formulario{
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 1fr;
+
+        .form__group{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 2em 3em;
+            min-width: 0;
+
+            label{
+                margin-bottom: .5em;
+                font-size: 1em;
+            }
+
+            input{
+                font-size: 1.5em;
+            }
+        }
+
+        .col-medio{
+            grid-column: 4 / 10;
+        }
+
+        .col-4{
+            grid-column: span 4;
+        }
+
+        .col-6{
+            grid-column: span 6;
+        }
+
+        .col-12{
+            grid-column: span 12;
+        }
+    }
+
+
+    /*Asignar habitacion > seccion de pisos y habitaciones disponibles*/
+
+    .section__disponibility{
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 20% 1fr;
+    }
+
+    .section__pisos{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1.5em;
+    }
+
+    .section__habitaciones{
+        padding: 1em;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+    }
+
+    &:last-child{
+        margin-bottom: 5em;
+    }
+}
+
+
+.main-principal{
+    width: 90%;
+
+    h1{
+        text-align: center;
+    }
+}
+
+
+.piso{
+    opacity: 0.6;
+    transition: 0.3s;
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+    cursor: pointer;
+
+    &--selected{
+        border-left: 0.6em solid $mainColor;
+        opacity: 1;
+        background-color: #86cfd3;
+        font-weight: bold;
+    }
+
+    &:hover{
+        opacity: 1;
+        background-color: #86cfd3;
+    }
+}
+
+.habitacion__datos{
+
+    img{
+        width: 2em;
+        height: 2em;
+    }
+}
+
+
+.habitacion{
+    box-sizing: border-box;
+    height: 13em;
+    width: 13em;
+    border-radius: .5em;
+    border: 1.5px solid #adb5bd;
+    box-shadow: .1rem .1rem .5rem #2b2d42;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .btn__habitacion{
+        width: 100%;
+        height: 20%;
+        border: none;
+        cursor: pointer;
+        background-color: #ccc;
+        // border-radius: 0rem 0rem 0.8rem 0.8rem;
+
+        transition-delay: .1s;
+        transition-duration: .25s;
+
+        &:hover{
+            background-color: $mainColor;
+        }
+    }
+
+    &__datos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+    }
+
+    &--free{
+        background-color: $verde-habitacion-libre;
+    }
+
+    &--occupied{
+        background-color: $rojo-habitacion-ocupada;
+    }
+
+    &--maintenance{
+        background-color: $plomo-habitacion-mantencion;
+    }
+
+    &--selected{
+        background-color: $mainColor;
+    }
+}

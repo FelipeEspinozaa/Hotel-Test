@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- bloque
+    bloque--modificado
+    bloque__elemento
+    bloque__elemento--modificado -->
+    
+    <div class="main-top">
+        <span class="main-top__logo">
+            Lo<span>GO</span>
+        </span>
+
+        <div class="main-top__profile">
+            <img src="img/user.svg" class="user-profile" alt="Profile">
+        </div>
+    </div>
+
+    <nav class="main-sidebar">
+        <a href="#" class="sidebar-link">
+            <img src="img/home.svg" alt="" class="sidebar-link__icon">
+            <span>Inicio</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="img/task.svg" alt="" class="sidebar-link__icon">
+            <span>Asignar habitacion</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="img/clipboard.svg" alt="" class="sidebar-link__icon">
+            <span>Disponibilidad</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="img/customer.svg" alt="" class="sidebar-link__icon">
+            <span>Registro pasajeros</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="img/add-user.svg" alt="" class="sidebar-link__icon">
+            <span>Check In</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="img/remove-user.svg" alt="" class="sidebar-link__icon">
+            <span>Check Out</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="img/bars.svg" alt="" class="sidebar-link__icon">
+            <span>Ganancias totales</span>
+        </a>
+    </nav>
+
+    <div class="main-content">
+        <div class="main-principal">
+            <h1>Asignar habitación</h1>
+
+            <div class="main-section">
+                <h2 class="section__title">Seleccione un tipo de habitación</h2>
+                <form class="section__inputs" id="form-tipoHab">
+                    <label for="single" class="inputs">Single
+                        <input type="radio" id="single" name="tipo-hab" value="single" checked="checked">
+                        <span for="single" class="checkmark"></span>
+                    </label>
+
+                    <label for="doble" class="inputs">Doble
+                        <input type="radio" id="doble" name="tipo-hab" value="doble">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label for="suite" class="inputs">Suite
+                        <input type="radio" id="suite" name="tipo-hab" value="suite">
+                        <span class="checkmark"></span>
+                    </label>
+                </form>
+            </div>
+
+            <div class="main-section">
+                <h2 class="section__title">Seleccione la/s habitacion/es:</h2>
+                <div class="section__disponibility">
+                    <div id="btn-pisos" class="section__pisos">
+                        <button id="piso-1" class="piso piso--selected">Piso 1</button>
+                        <button id="piso-2" class="piso">Piso 2</button>  
+                        <button id="piso-3" class="piso">Piso 3</button>    
+                    </div>
+                    <div class="section__habitaciones" id="lista-habitaciones">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="section__title">Ingresar datos personales:</h2>
+                <form class="section__formulario" id="form-tipoHab">
+                    <div class="form__group col-6">
+                        <label for="">Nombres</label>
+                        <input type="text">
+                    </div>
+                    <div class="form__group col-6">
+                        <label for="">Apellidos</label>
+                        <input type="text">
+                    </div>
+                    <div class="form__group col-4">
+                        <label for="">Rut</label>
+                        <input type="text">
+                    </div>
+                    <div class="form__group col-4">
+                        <label for="">Teléfono</label>
+                        <input type="text">
+                    </div>
+                    <div class="form__group col-4">
+                        <label for="">Fecha de Nacimiento</label>
+                        <input type="date">
+                    </div>
+                    <div class="form__group col-6">
+                        <label for="">Correo electrónico</label>
+                        <input type="email">
+                    </div>
+                    <div class="form__group col-6">
+                        <label for="">Confirme su Correo Electrónico</label>
+                        <input type="email">
+                    </div>
+                    <div class="form__group col-medio">
+                        <label for="">Fechas de estadía</label>
+                        <input type="date" id="picket-estadia" value="">
+                    </div>  
+                </form>
+            </div>
+
+            <div class="main-section">  
+                <h2 class="section__title">Confirmación de ocupación:</h2>
+                <div class="section__inputs">
+                    <div class="main-content__input input1">
+                        <input type="button" value="Cancelar">    
+                    </div>
+    
+                    <div class="main-content__input input2">
+                        <input type="button" value="Confirmar">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <template id="template-habitacion">
+        <div class="habitacion habitacion--free">
+            <div class="habitacion__datos">
+                <img class="icon-habitacion" src="img/bed.svg" alt="">
+                <span id="num-habitacion">Habitación 1</span>
+                <span id="tipo-habitacion">Tipo: </span>
+            </div>
+            <button class="btn__habitacion" id="btn-habitacion">Asignar</button>
+        </div>
+    </template>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
