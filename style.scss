@@ -362,3 +362,73 @@ body{
         background-color: $mainColor;
     }
 }
+
+
+
+
+
+
+//********************************* DISPONIBILIDAD.HTML
+.dataTable-bottom {
+    background-color: $mainColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//************************************************* MOBILE VERSION
+
+@media only screen and (max-width: 1080px){
+
+    body{
+    
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 70px 3fr 0.5fr;
+        grid-template-rows: 10% 1fr 10%;
+        grid-template-areas: 
+            "main-top main-top main-top"
+            "main-sidebar main-content main-content"
+            "main-sidebar main-content main-content";
+    }
+    
+
+    .main-sidebar{
+        width: auto;
+
+        span{
+            display: none;
+        }
+    }
+
+    .main-section{
+
+
+        .section__habitaciones{
+            justify-content: center;
+        }
+
+        .section__formulario{
+            // height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+

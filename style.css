@@ -423,4 +423,41 @@ body {
 .habitacion--selected {
   background-color: #00adb5;
 }
+
+.dataTable-bottom {
+  background-color: #00adb5;
+}
+
+@media only screen and (max-width: 1080px) {
+  body {
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70px 3fr 0.5fr;
+        grid-template-columns: 70px 3fr 0.5fr;
+    -ms-grid-rows: 10% 1fr 10%;
+        grid-template-rows: 10% 1fr 10%;
+        grid-template-areas: "main-top main-top main-top" "main-sidebar main-content main-content" "main-sidebar main-content main-content";
+  }
+  .main-sidebar {
+    width: auto;
+  }
+  .main-sidebar span {
+    display: none;
+  }
+  .main-section .section__habitaciones {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-section .section__formulario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style.css.map */
