@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <!-- bloque
+            bloque--modificado
+            bloque__elemento
+            bloque__elemento--modificado -->
+            
+            <div class="main-top">
+                <span class="main-top__logo">
+                    Lo<span>GO</span>
+                </span>
+                
+                <div class="main-top__profile">
+                    <img src="img/user.svg" class="user-profile" alt="Profile">
+                </div>
+            </div>
+            
+            <nav class="main-sidebar">
+                <a href="#" class="sidebar-link">
+                    <img src="img/home.svg" alt="" class="sidebar-link__icon">
+                    <span>Inicio</span>
+                </a>
+                <a href="index.html" class="sidebar-link">
+                    <img src="img/task.svg" alt="" class="sidebar-link__icon">
+                    <span>Asignar habitacion</span>
+                </a>
+                <a href="disponibilidad.html" class="sidebar-link">
+                    <img src="img/clipboard.svg" alt="" class="sidebar-link__icon">
+                    <span>Disponibilidad</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="img/customer.svg" alt="" class="sidebar-link__icon">
+                    <span>Registro pasajeros</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="img/add-user.svg" alt="" class="sidebar-link__icon">
+                    <span>Check In</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="img/remove-user.svg" alt="" class="sidebar-link__icon">
+                    <span>Check Out</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="img/bars.svg" alt="" class="sidebar-link__icon">
+                    <span>Ganancias totales</span>
+                </a>
+            </nav>
+            
+            <div class="main-content">
+                <div class="main-principal">
+                    <h1>Disponibilidad</h1>
+                    
+                    <div class="main-section">
+                        <h2 class="section__title">Estado de las habitaciones: </h2>
+                        
+                        <table class="table"></table>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+            <script src="js/disponibilidad.js"></script>
+            
+        </body>
+        </html>
